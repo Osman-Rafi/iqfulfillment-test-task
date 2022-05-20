@@ -8,8 +8,10 @@
       <!-- header -->
       <Header @toggleSidebar="toggleSidebar" />
       <!-- main content -->
-      <main>
-        <router-view />
+      <main class="router-content">
+        <div class="mx-4 px-2 mt-2">
+          <router-view></router-view>
+        </div>
       </main>
     </div>
   </div>

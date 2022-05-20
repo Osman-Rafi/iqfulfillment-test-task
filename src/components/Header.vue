@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex justify-content-between">
+  <div id="header" class="d-flex justify-content-between">
     <div class="d-flex">
       <b-button
         class="sidebar-toggler text-black"

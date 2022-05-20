@@ -1,16 +1,11 @@
 <template>
   <div id="app">
-    <DashboardLayoutVue />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import DashboardLayoutVue from './layout/DashboardLayout.vue';
-
 export default {
   name: "App",
-  components: {
-    DashboardLayoutVue,
-  },
 };
 </script>
