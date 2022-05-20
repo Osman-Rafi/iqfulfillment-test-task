@@ -1,7 +1,7 @@
 <template>
   <div
     class="navbar-nav sidebar shadow overflow-hidden"
-    :class="{ 'sidebar-hidden': !showSidebar }"
+    :class="{ 'sidebar-visible': showSidebar, 'sidebar-hidden': !showSidebar }"
   >
     <div class="h-100">
       <div class="vh-100 scroll-height d-flex flex-column">

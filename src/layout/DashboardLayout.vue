@@ -3,11 +3,14 @@
   <div id="wrapper">
     <!-- Sidebar -->
     <Sidebar :showSidebar="showSidebar" />
-
     <!-- Page content -->
     <div id="page-content">
       <!-- header -->
       <Header @toggleSidebar="toggleSidebar" />
+      <!-- main content -->
+      <main>
+        <router-view />
+      </main>
     </div>
   </div>
 </template>
@@ -24,7 +27,7 @@ export default {
   },
   data() {
     return {
-      showSidebar: true,
+      showSidebar: false,
     };
   },
   methods: {
