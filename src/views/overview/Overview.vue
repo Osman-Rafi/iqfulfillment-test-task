@@ -16,9 +16,9 @@
     </div>
     <b-row>
       <b-col lg="8">
-        <div class="d-flex">
+        <div>
           <b-row>
-            <b-col cols="12" sm="8" md="6" xl="4">
+            <b-col cols="12" md="6" xl="4">
               <StatSummaryCardVue
                 :icon="maskIcon"
                 title="Total Patients"
@@ -26,7 +26,7 @@
                 avatarbg="#f0fbf8"
               />
             </b-col>
-            <b-col cols="12" sm="8" md="6" xl="4">
+            <b-col cols="12" md="6" xl="4">
               <StatSummaryCardVue
                 :icon="stethoIcon"
                 title="Total Doctors"
@@ -34,7 +34,7 @@
                 avatarbg="#fef6ee"
               />
             </b-col>
-            <b-col cols="12" sm="8" md="6" xl="4">
+            <b-col cols="12" md="6" xl="4">
               <StatSummaryCardVue
                 :icon="firstAidIcon"
                 title="Total Staff"
@@ -42,6 +42,9 @@
                 avatarbg="#e5f1ff"
               />
             </b-col>
+          </b-row>
+          <b-row class="ms-0 me-1">
+            <covid-statistics />
           </b-row>
         </div>
       </b-col>
@@ -52,6 +55,7 @@
 <script>
 import { BButton, BRow, BCol } from "bootstrap-vue";
 import StatSummaryCardVue from "@/components/StatSummaryCard.vue";
+import CovidStatistics from "@/views/overview/partials/CovidStatistics.vue";
 import maskIcon from "@/assets/img/icons/medical-mask.png";
 import firstAidIcon from "@/assets/img/icons/first-aid-kit.png";
 import stethoIcon from "@/assets/img/icons/stethoscope.png";
@@ -63,6 +67,7 @@ export default {
     BRow,
     BCol,
     StatSummaryCardVue,
+    CovidStatistics,
   },
 
   data() {

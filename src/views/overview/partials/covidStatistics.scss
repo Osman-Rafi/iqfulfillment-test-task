@@ -1,0 +1,65 @@
+.covid-stat {
+  border-radius: 0.75rem;
+}
+.graph-label {
+  border: 1px solid #e6e6e6;
+  padding: 2px 10px 2px 10px;
+  font-size: 10px;
+  border-radius: 7px;
+  font-weight: 500;
+  color: #8b8a8a;
+
+  .positive {
+    &::before {
+      content: "";
+      display: inline-block;
+      background-color: #4372dd;
+      width: 10px;
+      height: 10px;
+      margin: 2px 7px -2px 2px;
+      border-radius: 2px;
+    }
+  }
+  .recovered {
+    &::before {
+      content: "";
+      display: inline-block;
+      background-color: #7ce6e6;
+      width: 10px;
+      height: 10px;
+      margin: 2px 7px -2px 2px;
+      border-radius: 2px;
+    }
+  }
+}
+
+.time-span-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  background-color: #e5f1ff;
+  width: 180px;
+  border-radius: 10px;
+  .time-span-select-btn {
+    padding: 2px 10px 2px 10px;
+    font-size: 13px;
+    border-radius: 7px;
+    color: #8b8a8a;
+    cursor: pointer;
+    height: 28px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+      background-color: #e6e6e6;
+    }
+
+    &.active {
+      color: #1d85ff;
+      font-weight: 700;
+      background-color: white;
+    }
+  }
+}
