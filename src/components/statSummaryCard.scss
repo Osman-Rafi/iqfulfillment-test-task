@@ -1,0 +1,13 @@
+.summary-card {
+  border-radius: 10px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  min-height: 87px;
+}
+@media (min-width: 992px) {
+  .summary-card {
+    min-width: 240px;
+  }
+}
+.avatar-container {
+  border-radius: 15px;
+}
