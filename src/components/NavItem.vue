@@ -35,14 +35,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.nav-link {
-  color: #121f3e66 !important;
-}
-.nav-link.active {
-  color: #0075ff !important;
-  font-weight: 500;
-}
-.nav-item {
-  font-weight: 500;
-}
+@import "./navItem.scss";
 </style>

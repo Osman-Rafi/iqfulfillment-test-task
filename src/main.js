@@ -16,7 +16,7 @@ const router = new VueRouter({
       children: [
         {
           path: "",
-          component: () => import("./views/Overview.vue"),
+          component: () => import("./views/overview/Overview.vue"),
         },
         {
           path: "*",

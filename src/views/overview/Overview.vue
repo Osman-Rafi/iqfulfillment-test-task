@@ -14,15 +14,22 @@
         </b-button>
       </div>
     </div>
+    <b-row>
+      <b-col lg="8">
+        <div class="d-flex"></div>
+      </b-col>
+    </b-row>
   </div>
 </template>
 
 <script>
-import { BButton } from "bootstrap-vue";
+import { BButton, BRow, BCol } from "bootstrap-vue";
 export default {
   name: "OverviewComponent",
   components: {
     BButton,
+    BRow,
+    BCol,
   },
 
   data() {
