@@ -44,7 +44,17 @@
             </b-col>
           </b-row>
           <b-row class="ms-0 me-1">
-            <covid-statistics />
+            <b-col cols="12" class="mx-0 px-0">
+              <covid-statistics />
+            </b-col>
+          </b-row>
+          <b-row class="mt-3">
+            <b-col cols="12" xl="6">
+              <patients-by-gender />
+            </b-col>
+            <b-col cols="12" xl="6">
+              <top-patients />
+            </b-col>
           </b-row>
         </div>
       </b-col>
@@ -54,8 +64,12 @@
 
 <script>
 import { BButton, BRow, BCol } from "bootstrap-vue";
+
 import StatSummaryCardVue from "@/components/StatSummaryCard.vue";
 import CovidStatistics from "@/views/overview/partials/CovidStatistics.vue";
+import PatientsByGender from "./partials/PatientsByGender.vue";
+import TopPatients from "./partials/TopPatients.vue";
+
 import maskIcon from "@/assets/img/icons/medical-mask.png";
 import firstAidIcon from "@/assets/img/icons/first-aid-kit.png";
 import stethoIcon from "@/assets/img/icons/stethoscope.png";
@@ -68,6 +82,8 @@ export default {
     BCol,
     StatSummaryCardVue,
     CovidStatistics,
+    PatientsByGender,
+    TopPatients,
   },
 
   data() {
