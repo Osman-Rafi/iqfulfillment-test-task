@@ -1,0 +1,31 @@
+.appointment-card-container {
+  width: 85%;
+
+  .appointment-card {
+    background-image: url("../../../assets/img/covid-card-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+  }
+
+  .check-btn {
+    background-color: #0075ff;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 10px;
+  }
+}
+.info-avatar-container {
+  border-radius: 15px;
+  background: #dcecff;
+}
+.info-card-footer-button {
+  background: #0070ff;
+  color: #ffffff;
+  padding: 12px;
+  width: 43px;
+  border-radius: 20px 0px 20px 0;
+}
+.appointment-title {
+  margin-top: 6.5rem !important;
+}

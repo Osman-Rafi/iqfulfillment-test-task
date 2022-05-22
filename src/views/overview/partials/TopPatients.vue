@@ -1,10 +1,10 @@
 <template>
   <div>
-    <b-card class="card-shadow rounded-curve">
+    <b-card class="card-shadow rounded-curve mt-3 mb-lg-0">
       <p class="fs-7-5 fw-7">Top Patient By Group</p>
       <pie-chart
-        :chartSeries="[55, 45,25]"
-        :chartColors="['#016eff', '#e2eefe','#5fe1e0']"
+        :chartSeries="[55, 45, 25]"
+        :chartColors="['#016eff', '#e2eefe', '#5fe1e0']"
       />
       <div class="d-flex mt-4">
         <div class="graph-label me-2">
@@ -13,7 +13,7 @@
         <div class="graph-label me-2">
           <span class="female"> Adult</span>
         </div>
-         <div class="graph-label me-2">
+        <div class="graph-label me-2">
           <span class="female"> Child</span>
         </div>
       </div>

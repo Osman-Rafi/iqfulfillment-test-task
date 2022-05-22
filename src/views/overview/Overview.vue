@@ -58,6 +58,9 @@
           </b-row>
         </div>
       </b-col>
+      <b-col lg="4">
+        <!-- <information-card /> -->
+      </b-col>
     </b-row>
   </div>
 </template>
@@ -69,6 +72,7 @@ import StatSummaryCardVue from "@/components/StatSummaryCard.vue";
 import CovidStatistics from "@/views/overview/partials/CovidStatistics.vue";
 import PatientsByGender from "./partials/PatientsByGender.vue";
 import TopPatients from "./partials/TopPatients.vue";
+// import InformationCard from "./partials/InformationCard.vue";
 
 import maskIcon from "@/assets/img/icons/medical-mask.png";
 import firstAidIcon from "@/assets/img/icons/first-aid-kit.png";
@@ -84,6 +88,7 @@ export default {
     CovidStatistics,
     PatientsByGender,
     TopPatients,
+    // InformationCard,
   },
 
   data() {
