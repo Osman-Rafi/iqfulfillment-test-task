@@ -215,6 +215,8 @@ export default {
   }
 }
 .arrow {
+  z-index: 1 !important;
+
   &::before {
     font-size: 19px !important;
     height: 2rem !important;
