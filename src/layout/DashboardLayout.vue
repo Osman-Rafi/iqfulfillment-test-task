@@ -2,9 +2,9 @@
   <!-- page wrapper -->
   <div id="wrapper">
     <!-- Sidebar -->
-    <Sidebar :showSidebar="showSidebar" />
+    <Sidebar :showSidebar="showSidebar" @closeSidebar="closeSidebar" />
     <!-- Page content -->
-    <div id="page-content">
+    <div id="page-content" :class="{ 'sidebar-opened': showSidebar }">
       <!-- header -->
       <Header @toggleSidebar="toggleSidebar" />
       <!-- main content -->
@@ -34,6 +34,9 @@ export default {
   },
   methods: {
     toggleSidebar() {
+      this.showSidebar = !this.showSidebar;
+    },
+    closeSidebar() {
       this.showSidebar = !this.showSidebar;
     },
   },

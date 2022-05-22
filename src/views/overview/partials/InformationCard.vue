@@ -1,7 +1,7 @@
 <template>
   <div>
-    <b-card class="card-shadow rounded-curve mt-3 mt-lg-0">
-      <div class="d-flex justify-content-between">
+    <b-card class="card-shadow rounded-curve mt-3 mt-xl-0">
+      <div class="d-flex justify-content-between mb-2">
         <p class="fs-7 fw-7">Informations</p>
         <b-button
           variant="link"
@@ -25,7 +25,7 @@
       <div class="dragable-cal-container">
         <draggable-cal></draggable-cal>
       </div>
-      <p class="fs-7 fw-7 appointment-title mb-0">Appointment list</p>
+      <p class="fs-7 fw-7 appointment-title mb-4">Appointment list</p>
       <div class="mt-3">
         <div class="appointment-card-container card border-0 ms-2">
           <div class="appointment-card">
@@ -39,7 +39,7 @@
                 <p class="mb-0 fw-500 fs-8">120 Participants</p>
               </div>
             </div>
-            <div class="ms-3 mb-2 mt-2">
+            <div class="ms-3 mb-2 mt-2 position-absolute">
               <div class="position-relative">
                 <b-avatar
                   size="1.75rem"
@@ -50,6 +50,7 @@
                 ></b-avatar>
               </div>
             </div>
+            <div class="my-4"></div>
             <div class="d-flex justify-content-end">
               <div class="info-card-footer-button">
                 <i class="bi bi-chevron-right"></i>
@@ -58,7 +59,7 @@
           </div>
         </div>
         <div class="appointment-card-container card border-0 ms-2 mt-3">
-          <div class="appointment-card">
+          <div class="appointment-card mb-3">
             <div class="d-flex mx-3 my-2">
               <div class="info-avatar-container p-3">
                 <b-img :src="heartIcon" width="28"></b-img>
@@ -69,8 +70,8 @@
                 <p class="mb-0 fw-500 fs-8">240 Participants</p>
               </div>
             </div>
-            <div class="ms-3 mb-2">
-              <div class="position-relative">
+            <div class="ms-3">
+              <div class="position-absolute">
                 <b-avatar
                   size="1.7rem"
                   v-for="(appointment, index) in appointments"
@@ -80,6 +81,7 @@
                 ></b-avatar>
               </div>
             </div>
+            <div class="my-4"></div>
             <div class="d-flex justify-content-end">
               <div class="info-card-footer-button">
                 <i class="bi bi-chevron-right"></i>
@@ -234,7 +236,7 @@ export default {
   position: absolute;
   left: -27px;
   max-width: 111%;
-  top: 66px;
+  top: 80px;
 }
 .month-select-dd-btn {
   background: #ffff;

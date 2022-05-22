@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-card class="card-shadow rounded-curve mt-3 mb-lg-0">
+    <b-card class="card-shadow rounded-curve mt-3 mt-lg-0">
       <p class="fs-7-5 fw-7">Top Patient By Group</p>
       <pie-chart
         :chartSeries="[55, 45, 25]"

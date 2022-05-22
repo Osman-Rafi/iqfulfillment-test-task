@@ -16,16 +16,15 @@
   }
 }
 .sidebar {
-  z-index: 1;
-  .scroll-height {
-    overflow-y: scroll;
+  position: fixed;
+  overflow: scroll;
+  z-index: 15;
+  height: 100vh;
 
-    &::-webkit-scrollbar-thumb {
-      visibility: hidden;
-    }
+  &::-webkit-scrollbar-thumb {
+    visibility: hidden;
   }
-
-  & :hover {
+  &:hover {
     &::-webkit-scrollbar-thumb {
       visibility: visible;
     }
@@ -34,7 +33,6 @@
 @media (min-width: 768px) {
   .sidebar {
     width: 260px;
-    min-height: 100vh;
   }
 }
 @media (max-width: 767px) {
@@ -52,4 +50,14 @@
 }
 .sidebar-items {
   margin-left: 2rem;
+}
+@media (min-width: 768px) {
+  .button-close{
+    display: none;
+  }
+}
+.button-close{
+  top:0;
+  right:0;
+  position: absolute;
 }

@@ -1,16 +1,16 @@
 <template>
-  <div id="header" class="d-flex justify-content-between">
+  <div id="header" class="d-flex justify-content-between bg-white">
     <div class="d-flex">
       <b-button
-        class="sidebar-toggler text-black"
+        class="sidebar-toggler text-black ms-3"
         @click="toggleSidebar"
         variant="link"
         :pressed="null"
       >
         <i class="bi bi-list fs-3"></i>
       </b-button>
-      <b-form-group class="ms-md-4 me-3">
-        <b-input-group>
+      <b-form-group class="ms-md-4 me-3 ms-3">
+        <b-input-group class="mt-1">
           <b-input-group-prepend>
             <div class="search-box-prepend">
               <i class="bi bi-search text-gray-100"></i>
@@ -22,7 +22,7 @@
             placeholder="Search..."
             class="search-box"
           />
-          <b-input-group-append class="mt-2 search-filter-toggler">
+          <b-input-group-append class="search-filter-toggler">
             <b-dropdown
               class="search-dropdown"
               toggle-class="search-dropdown-toggle-button"
@@ -125,5 +125,8 @@ export default {
       border-color: #ced4da;
     }
   }
+}
+.search-filter-toggler {
+  margin-top: 8px;
 }
 </style>

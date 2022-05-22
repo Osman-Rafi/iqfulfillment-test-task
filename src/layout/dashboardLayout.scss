@@ -4,7 +4,16 @@
 #page-content {
   width: 100%;
 }
+@media (min-width: 768px) {
+  #page-content {
+    margin-left: 260px;
+  }
+}
 .router-content {
   min-height: 100vh;
   background-color: #f2f8ff;
+}
+.sidebar-opened {
+  // margin-left: 260px;
+  transition: all 0.2s ease-in-out;
 }

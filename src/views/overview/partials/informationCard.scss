@@ -29,3 +29,8 @@
 .appointment-title {
   margin-top: 6.5rem !important;
 }
+@media (max-width: 767px) {
+  .appointment-title {
+    margin-top: 8.5rem !important;
+  }
+}

@@ -13,8 +13,8 @@
         </div>
       </div>
       <div class="time-span-select col-12 col-md-6 mt-3 mt-lg-0 p-2 ms-2">
-        <b-button class="time-span-select-btn active">Month</b-button>
-        <b-button class="time-span-select-btn">Weekly</b-button>
+        <div class="time-span-select-btn active">Month</div>
+        <div class="time-span-select-btn">Weekly</div>
       </div>
     </div>
     <div class="row">
