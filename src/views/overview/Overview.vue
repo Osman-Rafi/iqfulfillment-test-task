@@ -18,28 +18,18 @@
       <b-col xl="8">
         <div>
           <b-row>
-            <b-col cols="12" md="6" xl="4">
+            <b-col
+              cols="12"
+              md="6"
+              xl="4"
+              v-for="(data, index) in counterCardsData"
+              :key="index"
+            >
               <StatSummaryCardVue
-                :icon="maskIcon"
-                title="Total Patients"
-                value="24,908"
-                avatarbg="#f0fbf8"
-              />
-            </b-col>
-            <b-col cols="12" md="6" xl="4">
-              <StatSummaryCardVue
-                :icon="stethoIcon"
-                title="Total Doctors"
-                value="5,408"
-                avatarbg="#fef6ee"
-              />
-            </b-col>
-            <b-col cols="12" md="6" xl="4">
-              <StatSummaryCardVue
-                :icon="firstAidIcon"
-                title="Total Staff"
-                value="1,420"
-                avatarbg="#e5f1ff"
+                :icon="data.icon"
+                :title="data.title"
+                :value="data.value"
+                :avatarbg="data.avatarbg"
               />
             </b-col>
           </b-row>
@@ -73,6 +63,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import { BButton, BRow, BCol } from "bootstrap-vue";
 
 import StatSummaryCardVue from "@/components/StatSummaryCard.vue";
@@ -105,12 +96,31 @@ export default {
       maskIcon,
       firstAidIcon,
       stethoIcon,
+      data: {},
+      counterCardsData: [],
     };
   },
+  methods: {
+    setCounterCards() {
+      const data = this.data.counters;
+      const icons = ["medical-mask.png", "stethoscope.png", "first-aid-kit.png"];
+      const bgColors = ["#f0fbf8", "#fef6ee", "#e5f1ff"];
 
-  mounted() {},
+      this.counterCardsData = data.map((item, index) => ({
+        icon: icons[index],
+        title: item.title,
+        value: item.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+        avatarbg: bgColors[index],
+      }));
+    },
+  },
+  async mounted() {
+    const url = "https://apitest.iqfulfillment.com/v1/test/dashboard";
+    const res = await axios.get(url);
+    this.data = res.data;
 
-  methods: {},
+    await this.setCounterCards();
+  },
 };
 </script>
 

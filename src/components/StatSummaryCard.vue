@@ -4,7 +4,10 @@
     body-class="d-flex jutify-content-center align-items-center"
   >
     <div class="avatar-container p-4" :style="avatarStyle">
-      <b-img :src="icon" width="32"></b-img>
+      <b-img
+        :src="require(`../assets/img/icons/${icon}`)"
+        width="32"
+      ></b-img>
     </div>
     <div class="ms-3">
       <p class="fs-7-5 fw-500 mb-0 text-black-50 mb-1">{{ title }}</p>
