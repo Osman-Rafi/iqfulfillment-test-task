@@ -6,7 +6,7 @@
         :chartSeries="[55, 45]"
         :chartColors="['#016eff', '#e2eefe']"
       />
-      <div class="d-flex mt-4">
+      <div class="d-flex mb-0 mt-0">
         <div class="graph-label me-2">
           <span class="male"> Female</span>
         </div>

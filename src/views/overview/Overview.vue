@@ -48,18 +48,25 @@
               <covid-statistics />
             </b-col>
           </b-row>
-          <b-row class="mt-3">
-            <b-col cols="12" lg="6">
-              <patients-by-gender />
-            </b-col>
-            <b-col cols="12" lg="6">
-              <top-patients />
-            </b-col>
-          </b-row>
         </div>
       </b-col>
-      <b-col xl="4">
+      <b-col xl="4" class="mb-4">
         <information-card />
+      </b-col>
+    </b-row>
+    <b-row class="pb-3">
+      <b-col cols="12" class="col-xxl-8">
+        <b-row>
+          <b-col cols="12" lg="6">
+            <patients-by-gender />
+          </b-col>
+          <b-col cols="12" lg="6">
+            <top-patients />
+          </b-col>
+        </b-row>
+      </b-col>
+      <b-col cols="12" class="col-xxl-4">
+        <poly-clinic-division />
       </b-col>
     </b-row>
   </div>
@@ -73,6 +80,7 @@ import CovidStatistics from "@/views/overview/partials/CovidStatistics.vue";
 import PatientsByGender from "./partials/PatientsByGender.vue";
 import TopPatients from "./partials/TopPatients.vue";
 import InformationCard from "./partials/InformationCard.vue";
+import PolyClinicDivision from "./partials/PolyClinicDivision.vue";
 
 import maskIcon from "@/assets/img/icons/medical-mask.png";
 import firstAidIcon from "@/assets/img/icons/first-aid-kit.png";
@@ -89,6 +97,7 @@ export default {
     PatientsByGender,
     TopPatients,
     InformationCard,
+    PolyClinicDivision,
   },
 
   data() {

@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="s">
     <apexchart
       type="donut"
+      height="350px"
+      width="200px"
       :options="chartOptions"
       :series="series"
     ></apexchart>
@@ -41,7 +43,8 @@ export default {
         },
         plotOptions: {
           pie: {
-            customScale: 1,
+            size: "200px",
+            customScale: 0.5,
             donut: {
               size: "75%",
             },
@@ -65,4 +68,9 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+.apexcharts-canvas {
+  display: flex !important;
+  margin: auto !important;
+}
+</style>
