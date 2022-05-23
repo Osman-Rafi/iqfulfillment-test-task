@@ -1,31 +1,42 @@
 .graph-label {
-    border: 1px solid #e6e6e6;
-    padding: 2px 10px 2px 10px;
-    font-size: 10px;
-    border-radius: 7px;
-    font-weight: 500;
-    color: #8b8a8a;
-  
-    .male {
-      &::before {
-        content: "";
-        display: inline-block;
-        background-color: #4372dd;
-        width: 10px;
-        height: 10px;
-        margin: 2px 7px -2px 2px;
-        border-radius: 2px;
-      }
-    }
-    .female {
-      &::before {
-        content: "";
-        display: inline-block;
-        background-color: #e2eefe;
-        width: 10px;
-        height: 10px;
-        margin: 2px 7px -2px 2px;
-        border-radius: 2px;
-      }
+  border: 1px solid #e6e6e6;
+  padding: 2px 10px 2px 10px;
+  font-size: 10px;
+  border-radius: 7px;
+  font-weight: 500;
+  color: #8b8a8a;
+
+  .elderly {
+    &::before {
+      content: "";
+      display: inline-block;
+      background-color: #4372dd;
+      width: 10px;
+      height: 10px;
+      margin: 2px 7px -2px 2px;
+      border-radius: 2px;
     }
   }
+  .adult {
+    &::before {
+      content: "";
+      display: inline-block;
+      background-color: #e2eefe;
+      width: 10px;
+      height: 10px;
+      margin: 2px 7px -2px 2px;
+      border-radius: 2px;
+    }
+  }
+  .child {
+    &::before {
+      content: "";
+      display: inline-block;
+      background-color: #5fe1e0;
+      width: 10px;
+      height: 10px;
+      margin: 2px 7px -2px 2px;
+      border-radius: 2px;
+    }
+  }
+}

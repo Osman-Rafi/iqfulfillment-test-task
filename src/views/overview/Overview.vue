@@ -54,7 +54,7 @@
             />
           </b-col>
           <b-col cols="12" lg="6">
-            <top-patients />
+            <top-patients v-if="reportByGroup" :reportByGroup="reportByGroup" />
           </b-col>
         </b-row>
       </b-col>
@@ -96,6 +96,7 @@ export default {
       counterCardsData: [],
       covidReport: null,
       reportByGender: null,
+      reportByGroup: null,
     };
   },
   methods: {
@@ -117,13 +118,18 @@ export default {
     },
   },
   async mounted() {
-    const url = "https://apitest.iqfulfillment.com/v1/test/dashboard";
-    const res = await axios.get(url);
-    this.data = res.data;
+    try {
+      const url = "https://apitest.iqfulfillment.com/v1/test/dashboard";
+      const res = await axios.get(url);
+      this.data = res.data;
 
-    await this.setCounterCards();
-    this.covidReport = this.data.covid_report;
-    this.reportByGender = this.data.report_by_gender[0];
+      await this.setCounterCards();
+      this.covidReport = this.data.covid_report;
+      this.reportByGender = this.data.report_by_gender[0];
+      this.reportByGroup = this.data.report_by_group[0];
+    } catch (error) {
+      alert("Something went wrong with API.");
+    }
   },
 };
 </script>
