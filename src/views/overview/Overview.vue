@@ -35,7 +35,7 @@
           </b-row>
           <b-row class="ms-0 me-1">
             <b-col cols="12" class="mx-0 px-0">
-              <covid-statistics />
+              <covid-statistics :covidReport="covidReport" />
             </b-col>
           </b-row>
         </div>
@@ -98,12 +98,17 @@ export default {
       stethoIcon,
       data: {},
       counterCardsData: [],
+      covidReport: {},
     };
   },
   methods: {
     setCounterCards() {
       const data = this.data.counters;
-      const icons = ["medical-mask.png", "stethoscope.png", "first-aid-kit.png"];
+      const icons = [
+        "medical-mask.png",
+        "stethoscope.png",
+        "first-aid-kit.png",
+      ];
       const bgColors = ["#f0fbf8", "#fef6ee", "#e5f1ff"];
 
       this.counterCardsData = data.map((item, index) => ({
@@ -120,6 +125,7 @@ export default {
     this.data = res.data;
 
     await this.setCounterCards();
+    this.covidReport = this.data.covid_report;
   },
 };
 </script>

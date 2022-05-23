@@ -23,6 +23,10 @@ export default {
       type: Array,
       default: () => [],
     },
+    xaxisCategories: {
+      type: Array,
+      default: () => [],
+    },
   },
   components: {
     apexchart: VueApexCharts,
@@ -40,6 +44,9 @@ export default {
         },
       ],
       chartOptions: {
+        xaxis: {
+          categories: this.xaxisCategories,
+        },
         chart: {
           height: 350,
           type: "area",
@@ -104,9 +111,7 @@ export default {
           colors: ["#4372dd", "#7ce6e6"],
           strokeColor: "#fff",
         },
-        labels: [
-          
-        ],
+        labels: [],
         legend: {
           show: false,
         },

@@ -2,13 +2,15 @@
   <b-card class="card-shadow covid-stat">
     <div class="row justify-content-between">
       <div class="col-12 col-md-6">
-        <p class="fs-7 fw-7">Patients Covid Statistics</p>
-        <div class="d-flex fs-7-5">
+        <p class="fs-7 fw-7" v-if="covidReport.title">
+          {{ covidReport.title }}
+        </p>
+        <div v-if="covidReport.types" class="d-flex fs-7-5">
           <div class="graph-label me-2">
-            <span class="positive"> Positive Covid</span>
+            <span class="positive"> {{ covidReport.types[0] }}</span>
           </div>
           <div class="graph-label">
-            <span class="recovered">Recovered Covid</span>
+            <span class="recovered">{{ covidReport.types[1] }}</span>
           </div>
         </div>
       </div>
@@ -20,22 +22,9 @@
     <div class="row">
       <div class="col-12">
         <line-chart
-          :series1="[31, 40, 28, 51, 42, 109, 100, 28, 51, 42, 109, 100]"
-          :series2="[11, 32, 45, 32, 34, 52, 41, 11, 32, 45, 67, 34]"
-          :labels="[
-            'Jan',
-            'Feb',
-            'Mar',
-            'Apr',
-            'May',
-            'Jun',
-            'Jul',
-            'Aug',
-            'Sep',
-            'Oct',
-            'Nov',
-            'Dec',
-          ]"
+          :series1="covidReport.values[0]"
+          :series2="covidReport.values[1]"
+          :xaxisCategories="covidReport.categories"
         ></line-chart>
       </div>
     </div>
@@ -48,6 +37,20 @@ import LineChart from "@/components/LineChart.vue";
 
 export default {
   name: "CovidStatistics",
+  props: {
+    covidReport: {
+      required: true,
+      default: () => ({
+        title: "",
+        types: [],
+        values: [
+          [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        ],
+        categories: [],
+      }),
+    },
+  },
   components: {
     BCard,
     LineChart,
