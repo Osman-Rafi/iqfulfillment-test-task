@@ -2,80 +2,11 @@
 // Import Bootstrap and BootstrapVue CSS files (order is important)
 @import "bootstrap/dist/css/bootstrap.css";
 @import "bootstrap-vue/dist/bootstrap-vue.css";
+@import "./button.scss";
+@import "./card.scss";
+@import "./text.scss";
+@import "./utils.scss";
 
 body {
   font-family: "PT Sans", sans-serif;
-}
-
-/* Text Color */
-.text-gray-100 {
-  color: #121f3e66;
-}
-
-/* Text size */
-.fs-7 {
-  font-size: 14px !important;
-}
-
-.fs-7-5 {
-  font-size: 13px !important;
-}
-.fs-8 {
-  font-size: 12px !important;
-}
-/* font weight */
-.fw-500 {
-  font-weight: 500 !important;
-}
-.fw-7 {
-  font-weight: 700 !important;
-}
-
-/* Scrollbar */
-/* Works on Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #9d9d9d #fff;
-  scrollbar-width: 12px;
-}
-
-/* Works on Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-  width: 7px;
-}
-
-*::-webkit-scrollbar-track {
-  background: #ffff;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #9d9d9d;
-  border-radius: 10px;
-  border: 1px solid #ffff;
-}
-/* Card */
-
-.card-shadow {
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
-  border: 0 !important;
-  border-radius: 0.65rem;
-}
-.rounded-curve {
-  border-radius: 0.75rem !important;
-}
-.no-shadow {
-  box-shadow: none !important;
-}
-.button-dropdown {
-  height: 30px;
-  border: 1px solid #e5e5e5 !important;
-  border-radius: 9px !important;
-}
-.btn-success-light {
-  background-color: #ebf4ff !important;
-  color: #2e8aff !important;
-}
-.btn-block {
-  width: 100%;
-  display: block;
 }
