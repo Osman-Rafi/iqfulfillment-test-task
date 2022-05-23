@@ -5,7 +5,7 @@
       height="350px"
       width="200px"
       :options="chartOptions"
-      :series="series"
+      :series="chartSeries"
     ></apexchart>
   </div>
 </template>
@@ -14,13 +14,12 @@
 import VueApexCharts from "vue-apexcharts";
 
 export default {
-  name: "IqfulfillmentTestProjectPieChart",
+  name: "PieChart",
   components: {
     apexchart: VueApexCharts,
   },
   props: {
     chartSeries: {
-      type: Array,
       default: () => [],
     },
     chartColors: {
@@ -30,7 +29,6 @@ export default {
   },
   data() {
     return {
-      series: [...this.chartSeries],
       chartOptions: {
         chart: {
           type: "donut",

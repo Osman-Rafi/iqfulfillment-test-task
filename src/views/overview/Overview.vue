@@ -35,7 +35,7 @@
           </b-row>
           <b-row class="ms-0 me-1">
             <b-col cols="12" class="mx-0 px-0">
-              <covid-statistics :covidReport="covidReport" />
+              <covid-statistics v-if="covidReport" :covidReport="covidReport" />
             </b-col>
           </b-row>
         </div>
@@ -48,7 +48,10 @@
       <b-col cols="12" class="col-xxl-8">
         <b-row>
           <b-col cols="12" lg="6">
-            <patients-by-gender />
+            <patients-by-gender
+              v-if="reportByGender"
+              :reportByGender="reportByGender"
+            />
           </b-col>
           <b-col cols="12" lg="6">
             <top-patients />
@@ -73,10 +76,6 @@ import TopPatients from "./partials/TopPatients.vue";
 import InformationCard from "./partials/InformationCard.vue";
 import PolyClinicDivision from "./partials/PolyClinicDivision.vue";
 
-import maskIcon from "@/assets/img/icons/medical-mask.png";
-import firstAidIcon from "@/assets/img/icons/first-aid-kit.png";
-import stethoIcon from "@/assets/img/icons/stethoscope.png";
-
 export default {
   name: "OverviewComponent",
   components: {
@@ -93,12 +92,10 @@ export default {
 
   data() {
     return {
-      maskIcon,
-      firstAidIcon,
-      stethoIcon,
       data: {},
       counterCardsData: [],
-      covidReport: {},
+      covidReport: null,
+      reportByGender: null,
     };
   },
   methods: {
@@ -126,6 +123,7 @@ export default {
 
     await this.setCounterCards();
     this.covidReport = this.data.covid_report;
+    this.reportByGender = this.data.report_by_gender[0];
   },
 };
 </script>
