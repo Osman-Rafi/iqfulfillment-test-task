@@ -24,19 +24,35 @@
         </a>
         <!-- Sidebar items -->
         <div class="sidebar-items">
-          <p class="text-uppercase text-gray-100 fs-7-5">managements</p>
+          <p class="text-uppercase text-gray-100 fs-7-5 ms-4 ps-1">
+            managements
+          </p>
           <div class="nav-items">
             <nav-item title="Overview" icon="bi-grid" :link="'/'" active />
-            <nav-item title="Statistics" icon="bi-bar-chart" :link="'/'" />
-            <nav-item title="Patients" icon="bi-thermometer" :link="'/'" />
-            <nav-item title="Polyclinic" icon="bi-clipboard" :link="'/'" />
-            <nav-item title="Doctors" icon="bi-people" :link="'/'" />
-            <nav-item title="Medicines" icon="bi-box" :link="'/'" />
+            <nav-item
+              title="Statistics"
+              icon="bi-bar-chart"
+              :link="'/statistics'"
+            />
+            <nav-item
+              title="Patients"
+              icon="bi-thermometer"
+              :link="'/patients'"
+            />
+            <nav-item
+              title="Polyclinic"
+              icon="bi-clipboard"
+              :link="'/ployclinic'"
+            />
+            <nav-item title="Doctors" icon="bi-people" :link="'/doctors'" />
+            <nav-item title="Medicines" icon="bi-box" :link="'/medicines'" />
           </div>
-          <p class="text-uppercase text-gray-100 fs-7-5 mt-4">support</p>
+          <p class="text-uppercase text-gray-100 fs-7-5 mt-4 ms-3 ps-3">
+            support
+          </p>
           <div class="nav-items">
-            <nav-item title="Messages" icon="bi-envelope" :link="'/'" />
-            <nav-item title="Settings" icon="bi-gear" :link="'/'" />
+            <nav-item title="Messages" icon="bi-envelope" :link="'/messages'" />
+            <nav-item title="Settings" icon="bi-gear" :link="'/settings'" />
           </div>
         </div>
       </div>

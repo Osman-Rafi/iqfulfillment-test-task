@@ -6,16 +6,19 @@
   font-weight: 500;
 }
 .nav-item-container {
+  padding: 2px;
   .nav-item {
     font-weight: 500;
     margin-left: 2rem !important;
   }
   &.active-item {
-    padding: 2px;
-    border-left: 3px solid #157ffc!important;
+    border-left: 3px solid #157ffc !important;
     background: -webkit-linear-gradient(90deg, #0075ff1a 0%, #0075ff00 117.12%);
     background: -moz-linear-gradient(90deg, #0075ff1a 0%, #0075ff00 117.12%);
     background: linear-gradient(to 90deg, #0075ff1a 0%, #0075ff00 117.12%);
     background: linear-gradient(90deg, #0075ff1a 0%, #0075ff00 117.12%);
+  }
+  &:hover {
+    background-color: #f4f5f8 !important;
   }
 }

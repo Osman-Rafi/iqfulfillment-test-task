@@ -1,10 +1,10 @@
 <template>
-  <div class="nav-item-container" :class="active ? 'active-item' : ''">
+  <div class="nav-item-container" :class="activeted ? 'active-item' : ''">
     <div class="nav-item mb-2">
-      <a :class="'nav-link text-gray-100'" href="">
+      <router-link :class="'nav-link text-gray-100'" :to="link">
         <i :class="'bi ' + icon"></i>
         <span class="ms-3">{{ title }}</span>
-      </a>
+      </router-link>
     </div>
   </div>
 </template>
@@ -31,6 +31,11 @@ export default {
       type: Boolean,
       required: false,
       default: false,
+    },
+  },
+  computed: {
+    activeted: function () {
+      return this.$route.path === this.link;
     },
   },
 };
