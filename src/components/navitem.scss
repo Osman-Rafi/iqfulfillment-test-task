@@ -5,6 +5,17 @@
   color: #0075ff !important;
   font-weight: 500;
 }
-.nav-item {
-  font-weight: 500;
+.nav-item-container {
+  .nav-item {
+    font-weight: 500;
+    margin-left: 2rem !important;
+  }
+  &.active-item {
+    padding: 2px;
+    border-left: 3px solid #157ffc!important;
+    background: -webkit-linear-gradient(90deg, #0075ff1a 0%, #0075ff00 117.12%);
+    background: -moz-linear-gradient(90deg, #0075ff1a 0%, #0075ff00 117.12%);
+    background: linear-gradient(to 90deg, #0075ff1a 0%, #0075ff00 117.12%);
+    background: linear-gradient(90deg, #0075ff1a 0%, #0075ff00 117.12%);
+  }
 }

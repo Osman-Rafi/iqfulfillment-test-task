@@ -52,7 +52,7 @@
           </div>
         </div>
       </div>
-      <div class="mt-3 mt-lg-5">
+      <div class="mt-3 mt-lg-4 mb-lg-1 pt-lg-3">
         <b-button
           variant="success-light"
           class="fs-7-5 fw-500 py-3 mt-3 ms-4 me-4 see-more-button"

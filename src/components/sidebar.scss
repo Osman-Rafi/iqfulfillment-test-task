@@ -49,15 +49,15 @@
   transition: width 0.2s ease;
 }
 .sidebar-items {
-  margin-left: 2rem;
+  // margin-left: 2rem;
 }
 @media (min-width: 768px) {
-  .button-close{
+  .button-close {
     display: none;
   }
 }
-.button-close{
-  top:0;
-  right:0;
+.button-close {
+  top: 0;
+  right: 0;
   position: absolute;
 }

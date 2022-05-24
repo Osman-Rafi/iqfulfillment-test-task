@@ -1,9 +1,11 @@
 <template>
-  <div class="nav-item mb-2">
-    <a :class="'nav-link text-gray-100'" href="">
-      <i :class="'bi ' + icon"></i>
-      <span class="ms-3">{{ title }}</span>
-    </a>
+  <div class="nav-item-container" :class="active ? 'active-item' : ''">
+    <div class="nav-item mb-2">
+      <a :class="'nav-link text-gray-100'" href="">
+        <i :class="'bi ' + icon"></i>
+        <span class="ms-3">{{ title }}</span>
+      </a>
+    </div>
   </div>
 </template>
 
@@ -34,6 +36,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "./navItem.scss";
 </style>

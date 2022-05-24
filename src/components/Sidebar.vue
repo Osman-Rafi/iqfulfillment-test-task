@@ -26,7 +26,7 @@
         <div class="sidebar-items">
           <p class="text-uppercase text-gray-100 fs-7-5">managements</p>
           <div class="nav-items">
-            <nav-item title="Overview" icon="bi-grid" :link="'/'" />
+            <nav-item title="Overview" icon="bi-grid" :link="'/'" active />
             <nav-item title="Statistics" icon="bi-bar-chart" :link="'/'" />
             <nav-item title="Patients" icon="bi-thermometer" :link="'/'" />
             <nav-item title="Polyclinic" icon="bi-clipboard" :link="'/'" />
