@@ -17,7 +17,7 @@
                 :class="{
                   'input-group-prepend-with-suggestions':
                     searchResults.length ||
-                    (!searchResults.length && search && !searchApiLoading),
+                    (!searchResults.length && !searchSelected && search.length),
                 }"
               >
                 <div class="search-box-prepend">
@@ -32,6 +32,7 @@
                 @update="searchInput"
                 @input="triggerInputChange"
                 debounce="500"
+                autocomplete="off"
               />
               <div class="search-loading-spinner">
                 <b-spinner
@@ -48,6 +49,7 @@
                   v-for="(result, index) in searchResults"
                   :key="index"
                   class="result-item"
+                  @click="selectSearchResult(result)"
                 >
                   <p class="fs-8 px-3 text-black-50 mb-0 mt-2">{{ result }}</p>
                   <div class="px-3">
@@ -58,7 +60,9 @@
               </div>
             </template>
             <template
-              v-else-if="!searchResults.length && search && !searchApiLoading"
+              v-else-if="
+                !searchResults.length && search.length >= 2 && !searchApiLoading && !searchSelected
+              "
             >
               <div class="search-result-container bg-white">
                 <div class="result-item">
@@ -69,20 +73,6 @@
               </div>
             </template>
           </div>
-          <!-- <b-input-group-append class="search-filter-toggler">
-            <b-dropdown
-              class="search-dropdown"
-              toggle-class="search-dropdown-toggle-button"
-            >
-              <template #button-content>
-                <span class="text-black fw-7 ls-1">
-                  Filter
-                  <i class="bi bi-chevron-down text-gray-100 ms-2"></i>
-                </span>
-              </template>
-              <b-dropdown-item>An item</b-dropdown-item>
-            </b-dropdown>
-          </b-input-group-append> -->
         </div>
         <b-dropdown
           class="search-dropdown"
@@ -127,7 +117,6 @@ import {
   BInputGroup,
   BFormInput,
   BInputGroupPrepend,
-  // BInputGroupAppend,
   BDropdown,
   BDropdownItem,
   BAvatar,
@@ -141,7 +130,6 @@ export default {
     BFormInput,
     BInputGroup,
     BInputGroupPrepend,
-    // BInputGroupAppend,
     BDropdown,
     BDropdownItem,
     BAvatar,
@@ -153,6 +141,7 @@ export default {
       search: "",
       searchResults: [],
       searchApiLoading: false,
+      searchSelected: false,
     };
   },
 
@@ -162,6 +151,7 @@ export default {
     },
     async searchInput() {
       this.searchApiLoading = true;
+      this.searchSelected = false;
 
       if (this.search.length >= 2) {
         try {
@@ -182,6 +172,11 @@ export default {
     },
     triggerInputChange() {
       this.searchApiLoading = !this.searchApiLoading;
+    },
+    selectSearchResult(result) {
+      this.search = result;
+      this.searchResults = [];
+      this.searchSelected = true;
     },
   },
 };

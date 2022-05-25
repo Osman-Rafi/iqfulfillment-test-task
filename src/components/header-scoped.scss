@@ -66,6 +66,9 @@
 .search-result-container {
   border: 1px solid #ced4da;
   border-radius: 0 0 10px 10px;
+  max-height: 300px;
+  overflow: auto;
+
   .result-item {
     cursor: pointer;
     font-weight: 500;
